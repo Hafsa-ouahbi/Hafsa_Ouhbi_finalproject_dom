@@ -1,28 +1,35 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
 }
+
+/*& ----------------------------nav---------------------- */
 .nav {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #ffffff;
     display: flex;
     justify-content: space-between;
     padding-inline: 7vw;
     align-items: center;
 }
+
 .nav h1 {
     color: #37373f;
 }
+
 .list1 {
     display: flex;
     align-items: center;
     gap: 2vw;
 }
+
 .list1 li {
     list-style: none;
     text-decoration: none;
 }
-.list1  select {
+
+.list1 select {
     background-color: transparent;
     border: none;
     text-decoration: none;
@@ -31,10 +38,12 @@ body {
     font-weight: 500;
     outline: none;
 }
+
 .sele {
     position: relative;
     /* display: inline-block; */
 }
+
 .sele::after {
     position: absolute;
     content: "";
@@ -46,9 +55,11 @@ body {
     transition: width 0.3s ease-in-out;
     padding-bottom: 3px;
 }
+
 .sele:hover::after {
     width: 100%;
 }
+
 .list1 a {
     text-decoration: none;
     color: #5f6265;
@@ -57,6 +68,7 @@ body {
     position: relative;
     padding-bottom: 3px;
 }
+
 .list1 a::after {
     content: "";
     position: absolute;
@@ -67,15 +79,20 @@ body {
     background-color: #ce1212;
     transition: width 0.3s ease;
 }
+
 .list1 a:hover::after {
-    width: 100%;          /* expand on hover */
+    width: 100%;
+    /* expand on hover */
 }
+
 .list1 a:hover {
     color: #37373f;
 }
+
 .dot {
     color: #ce1212;
 }
+
 .but1 {
     background-color: #ce1212;
     padding: 1.5vh 1.7vw;
@@ -84,6 +101,96 @@ body {
     color: #ffffff;
     font-size: 16px;
 }
+
 .but1:hover {
     background-color: #d53535;
+}
+
+/* & ----------------------------hero section-------------------------- */
+@font-face {
+    font-family: "hafsa";
+    src: url("../fonts/AmaticSC-Bold.ttf");
+    font-weight: 500;
+    font-style: normal;
+}
+
+.hero {
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 7vw;
+    padding-top: 8vh;
+    padding-bottom: 8vh;
+    align-items: center;
+
+}
+
+.left1 {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+.left1 h1 {
+    font-family: "hafsa";
+    font-size: 5rem;
+    color: #37373f;
+    margin: 0;
+}
+
+.top1 {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.top1 p {
+    font-size: 21px;
+    color: #5f6265;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.bot1 {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
+
+.btn2 {
+    background-color: #ce1212;
+    padding: 1.5vh 1.7vw;
+    border: none;
+    border-radius: 20px;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.btn3 {
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+    border: none;
+    background-color: transparent;
+}
+
+.btn3 p {
+    font-size: 18px;
+    color: #37373f;
+}
+.btn3 p:hover {
+    color: #ce1212;
+}
+.img1 {
+    position: relative;
+    animation: upDown 2s infinite alternate;
+    /* alternate makes mooves moore smooth */
+}
+
+@keyframes upDown {
+    from {
+       top:  0px;
+    }
+    to {
+        top: 40px;
+    }
 }
