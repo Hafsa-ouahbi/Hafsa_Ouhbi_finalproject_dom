@@ -509,3 +509,62 @@
     font-family: "hafsa";
     font-size: 30px;
 }
+/*& -------------------chef------------------------- */
+
+.chef {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vh;
+    padding: 5vh 5vw;
+    align-items: center;
+}
+.chef h4 {
+    color: #5f6265;
+    font-weight: 100;
+    font-size: 20px;
+}
+.chef h1 {
+    font-family: "hafsa";
+    font-size: 45px;
+}
+.chef h1 {
+    font-family: "hafsa";
+    font-size: 45px;
+}
+.chefs2 {
+    display: flex;
+    gap: 3vw;
+    padding: 2vh 5vw;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.chefs2 div {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    align-items: center;
+    text-align: center;
+    /* padding: 3vh 3vw;*/
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1), 
+                0 4px 6px rgba(0,0,0,0.05);
+    max-width: 400px;
+    border-radius: 10px;
+    padding-bottom: 5vh;
+    transition: all 0.2s ease;
+}
+/* scale makes the div bigger without breaking the layout */
+.chefs2 div:hover {
+    transform: translateY(-10px) scale(1.08);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.358);
+    z-index: 10;
+}
+
+.chefs2 img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
