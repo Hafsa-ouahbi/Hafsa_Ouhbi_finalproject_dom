@@ -19,3 +19,23 @@ numbers.forEach(function (nb) {
         }
     }, time)
 })
+
+
+let btns = document.querySelectorAll(".BTN button");
+let plates = document.querySelectorAll(".realMenu div");
+
+btns.forEach(function(b) {55555555
+    b.addEventListener("click", function() {
+        // njibo category dyal l button li derna eliha click
+        let category = b.getAttribute("data-category");
+
+        // show/hide plates
+        plates.forEach(function(item) {
+            if(item.dataset.category === category) {
+                item.style.display = "flex";
+            } else {
+                item.style.display = "none";
+            }
+        });
+    });
+});

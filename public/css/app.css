@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
 
@@ -220,6 +221,8 @@
 .top2 p {
     color: #5f6265;
     font-size: 20px;
+    font-weight: 100;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .top2 h2 {
     color: #37373f;
@@ -404,4 +407,105 @@
     font-size: 20px;
     color: #f2f2f29f;
     font-weight: bold;
+}
+
+/* &---------------------menu---------------------- */
+.menu {
+    display: flex;
+    flex-direction: column;
+    padding-top: 5vh;
+    /* padding: 8vh 5vw; */
+    gap: 6vh;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4vh;
+}
+.head h4 {
+    color: #5f6265;
+    font-size: 18px;
+    font-weight: 100;
+}
+.head h1 {
+    font-family: "hafsa";
+    font-size: 60px;
+}
+.head span {
+    font-family: "hafsa";
+    color: #ce1212;
+}
+.BTN  {
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+    justify-content: center;
+}
+.BTN button {
+    background-color: transparent;
+    border: none;
+    font-size: 21px;
+    color: #37373fe3;
+    border-bottom: 2px solid #37373f56;
+    transition: all 0.2s ease;
+    padding-bottom: 3px;
+}
+.BTN button:hover {
+    border-bottom-color:#ce1212 ;
+}
+.small {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh;
+}
+.title h4 {
+    color: #5f6265;
+    font-size: 18px;
+    font-weight: 100;
+}
+.title h1 {
+    font-family: "hafsa";
+    font-size: 50px;
+    color: #ce1212;
+}
+.realMenu {
+    width: 90vw;
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    gap: 3vh;
+    /* background-color: #d53535; */
+    box-sizing: border-box;
+    overflow-x: hidden;
+    align-items: center;
+}
+.realMenu img {
+    width: 320px;
+}
+.realMenu div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+}
+.realMenu div h2 {
+    color: #37373f;
+    font-family: "hafsa";
+    font-size: 30px;
+}
+.realMenu div p {
+    color: #5f6265;
+}
+.realMenu div h3 {
+    color: #ce1212;
+    font-family: "hafsa";
+    font-size: 30px;
 }
