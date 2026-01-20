@@ -4,7 +4,7 @@ numbers.forEach(function (nb) {
     let end = parseInt(nb.getAttribute("data-target"))
     let cur = 0
 
-    let time 
+    let time = end
     if (time < 100) time = 50
     else if (time <= 500) time = 20
     else time = 1
@@ -24,7 +24,7 @@ numbers.forEach(function (nb) {
 let btns = document.querySelectorAll(".BTN button");
 let plates = document.querySelectorAll(".realMenu div");
 
-btns.forEach(function(b) {55555555
+btns.forEach(function(b) {
     b.addEventListener("click", function() {
         // njibo category dyal l button li derna eliha click
         let category = b.getAttribute("data-category");
