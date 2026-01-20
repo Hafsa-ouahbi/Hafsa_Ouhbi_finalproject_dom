@@ -1,4 +1,4 @@
-body {
+* {
     margin: 0;
     padding: 0;
 
@@ -12,6 +12,7 @@ body {
     justify-content: space-between;
     padding-inline: 7vw;
     align-items: center;
+    height: 10vh;
 }
 
 .nav h1 {
@@ -193,4 +194,214 @@ body {
     to {
         top: 40px;
     }
+}
+
+/* &------------------------------about page------------------- */
+
+.about {
+    display: flex;
+    flex-direction: column;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    align-items: center;
+    padding: 8vh 5vw;
+    gap: 5vh;
+}
+.big {
+    display: flex;
+    gap: 4vw;
+}
+.top2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.top2 p {
+    color: #5f6265;
+    font-size: 20px;
+}
+.top2 h2 {
+    color: #37373f;
+    font-family: "hafsa";
+    font-size: 60px;
+    margin: 0;
+}
+.span {
+    color: #ce1212;
+}
+.left2 img {
+    width: 800px;
+}
+.para span {
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+}
+.fr {
+    color: #5f6265;
+    font-size: 19px;
+}
+.con {
+    border: 5px solid #5f6265;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3vh 5vw;
+    gap: 1vh;
+    color: #37373f;
+}
+.con h2 {
+    color: #ce1212;
+}
+.left2 {
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+}
+.right2 {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    letter-spacing: 0.2px;
+    line-height: 25px;
+}
+.para {
+    color: #37373f;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    gap: 1.5vh;
+    justify-content: first baselinee;
+}
+.span2  {
+    color: #37373f;
+    font-size: 19px;
+}
+/*&------------------------ why choose us -----------------------*/
+.why {
+    display: grid;
+    /* grid-template-columns: repeat(4, 1fr); */
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 4vw;
+    /* height: 40vh; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f2f2f2;
+    padding: 8vh 5vw;
+}
+.left3 {
+    background-color: #ce1212;
+    display: flex;
+    flex-direction: column;
+    padding: 5vh 3vw;
+    /* align-items: center; */
+    /* justify-content: center; */
+    gap: 4vh;
+    text-align: left;
+    color: #f2f2f2;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1), 0 4px 6px rgba(0,0,0,0.05);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.left3 p {
+    font-size: 19px;
+}
+.left3 button {
+    width: 11vw;
+    margin-left: 6vw;
+    /* padding: 1vh 4vw; */
+    padding-inline: 2vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    display: flex;
+    align-items: center;
+    background-color: #d53535;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    color: #f2f2f2;
+    font-size: 17px;
+    transition: all 0.1s ease;
+}
+.left3 button:hover {
+    background-color: #f2f2f2;
+    color: #ce1212;
+}
+.left3 button:hover svg {
+    fill: #ce1212;
+}
+.cards {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5vh;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+    align-items: center;
+    gap: 3vh;
+    text-align: center;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1), 0 4px 6px rgba(0,0,0,0.05);
+}
+.cards h2 {
+    color: #37373f;
+}
+.cards p {
+    color: #5f6265;
+}
+.cards .svg3 {
+    background-color: #d535351b;
+    padding: 3vh ;
+    padding-inline: 3.2vh;
+    border-radius:50px ;
+    transition: all 0.2s ease;
+}
+.svg3 svg {
+    fill: #ce1212;
+    transition: all 0.2s ease;
+}
+.cards:hover .svg3 {
+    background-color: #ce1212;
+}
+.cards:hover svg {
+    fill: #f2f2f2;
+}
+/* &-----------------------program----------------- */
+.program {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+    height: 50vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.program::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../img/11.jpg");
+    background-size: cover;
+    filter: blur(2px);
+    z-index: -2;
+}
+.program::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.258); /* darkness level */
+    z-index: -1;
+}
+.program  div {
+    position: relative;
+    z-index: 1;
+}
+.program .nb h1 {
+    color: #ffffff;
+    font-size: 50px;
+}
+.program .nb p {
+    font-size: 20px;
+    color: #f2f2f29f;
+    font-weight: bold;
 }
