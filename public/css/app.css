@@ -566,5 +566,121 @@
     height: auto;
     border-radius: 10px;
 }
+/* &---------------------reservations----------- */
+.book {
+    background-color: #f5f5f5; /* replace $bgbook */
+    display: flex;
+    /* padding-left: 6vw; */
+    padding-right: 6vw;
+    margin-bottom: 5vh;
+    width: fit-content;
+    height: 75vh;
+}
+
+.imb {
+    width: 36vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.imb img {
+    width: 100%;
+    height: 100%;
+
+}
+.formm {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    padding: 15vh 3vw;
+    width: 50%;
+    align-items: center;
+}
+
+.grid-book {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1vw;
+    width: 100%;
+}
+
+.grid-book input {
+    padding: 1vh 0.4vw;
+}
+
+.grid-book input:focus {
+    outline: none;
+    border: #ce1212 solid 2px; /* $myclr */
+    box-shadow: 0 8px 25px #ce121240;
+}
+
+
+.text {
+    width: 100%;
+}
+
+.text textarea {
+    width: 100%;
+    height: 26vh;
+    padding: 1vh 1vw;
+}
+
+.text textarea:focus {
+    outline: none;
+    border: #ce1212 solid 2px; 
+    box-shadow: 0 8px 25px #ce121259;
+}
+
+
+.book-bu {
+    background-color: #ce1212; 
+    border-radius: 5px;
+    padding: 1vh 2vw;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.book-bu:hover {
+    background-color: #d53535; /* darker version of $myclr */
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    align-items: center;
+    padding-top: 4vh;
+}
+
+.form .head-book {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+}
+
+.form .head-book button {
+    background-color: transparent;
+    border-radius: 20px;
+    border: none;
+    padding: 1vh 1.5vw;
+    font-weight: 100;
+    font-size: 18px;
+    color: #5f6265; 
+}
+
+.head-book h1 {
+    font-family: "hafsa";
+    font-size: 50px;
+}
+.head-book h1 span {
+    font-family: "hafsa";
+    color: #ce1212;
+}
+
 
 
