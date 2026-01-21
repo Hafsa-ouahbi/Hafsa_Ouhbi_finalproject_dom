@@ -70,7 +70,7 @@
 .list1 a {
     text-decoration: none;
     color: #5f6265;
-    font-size: 20px;
+    font-size: 18.5px;
     font-weight: 500;
     position: relative;
     padding-bottom: 3px;
@@ -98,6 +98,7 @@
 
 .dot {
     color: #ce1212;
+    font-size: 40px;
 }
 
 .but1 {
@@ -236,17 +237,22 @@
     font-size: 60px;
     margin: 0;
 }
-.span {
+.span1 {
     color: #ce1212;
     font-family: "hafsa";
+    font-size: 50px;
 }
 .left2 img {
     width: 800px;
 }
-.para span {
+.para span  {
     display: flex;
     align-items: center;
     gap: 0.5vw;
+}
+.para span p {
+    font-size: 18px;
+    color: #37373f;
 }
 .fr {
     color: #5f6265;
@@ -417,6 +423,10 @@
 }
 
 /* &---------------------menu---------------------- */
+.chch1 {
+    font-size: 50px;
+    color: #ce1212;
+}
 .menu {
     display: flex;
     flex-direction: column;
@@ -529,6 +539,10 @@
     color: #5f6265;
     font-weight: 100;
     font-size: 20px;
+}
+.chch {
+    font-size: 44px;
+    color: #ce1212;
 }
 .chef h1 {
     font-family: "hafsa";
@@ -688,8 +702,9 @@
     font-family: "hafsa";
     font-size: 50px;
 }
-.head-book h1 span {
+.head-book h1 .tab {
     font-family: "hafsa";
+    font-size: 50px ;
     color: #ce1212;
 }
 
@@ -775,7 +790,25 @@
 .spa {
     color: #ce1212;
 }
-
+/* &----------------contact2-------------------- */
+.cnt {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-inline: 8vw;
+    gap: 2.5vh;
+    padding-top: 4vh;
+    padding-bottom: 6vh;
+}
+.it {
+    padding: 3vh 2vw;
+    display: flex;
+    gap: 1vw;
+    box-shadow: 0 1px 20px rgba(0,0,0,0.1), 0 4px 6px rgba(0,0,0,0.05);
+}
+.text12 .span12,.p12{
+    font-size: 23px;
+    font-family: "hafsa";
+}
 
 
 
