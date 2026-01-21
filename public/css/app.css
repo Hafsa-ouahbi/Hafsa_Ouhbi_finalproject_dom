@@ -810,5 +810,115 @@
     font-family: "hafsa";
 }
 
+/* &------------carousel------------- */
+.testimonials{
+    padding: 5vh 6vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+    gap: 4vh;
+    margin-top: 7vh;
+    background-color: #f2f2f2;
+}
+.testimonials p {
+    font-size: 15px;
+    color: #171212d5;
+}
+.testimonials h1{
+    font-size: 45px;
+    font-family: "hafsa";
+}
+.testimonials h1 span {
+    color: #ce1212;
+    font-size: 45px;
+}
+
+
+/* ^ carousel */
+.carousel-container {
+    width: 70%;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+
+.slide {
+    min-width: 100%;
+    display: flex;
+    gap: 2vw;
+    position: relative;
+    
+}
+.slide .text5{
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    padding-left: 1vw;
+    
+}
+.slide > .text5::before{
+    content: '';
+    width: 3px;
+    height: 60%;
+    top: 8px;
+    position: absolute;
+    left: 1px;
+    background-color: #ce1212;
+}
+.slide .text5 p{
+    line-height: 6vh;
+    font-weight: 500;
+}
+.slide .text5 h3{
+    font-weight: 400;
+}
+.slide .text5 h4{
+    color: #171212a8;
+    font-size: 14px;
+}
+.slide .text5 .star {
+    display: flex;
+    
+}
+.slide .text5 .star svg{
+    color: #ffc107;
+}
+
+.slide img {
+    width: 40%;
+    height: 55%;
+    object-fit: cover;
+    border-radius: 50%;
+
+}
+
+.indicators-grp{
+    width: 100%;
+    padding: 2vh 0;
+    position: absolute;
+    bottom: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    z-index: 10;
+}
+.indicator{
+    width: 12px;
+    height: 12px;
+    background: #808080bd;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.activeIndicator{
+    background-color: #ce1212;
+}
 
 

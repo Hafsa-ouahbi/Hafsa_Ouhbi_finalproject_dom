@@ -39,3 +39,42 @@ btns.forEach(function(b) {
         });
     });
 });
+    const containers = document.querySelectorAll(".carousel-container");
+
+    containers.forEach(container => {
+
+        let carousel = container.querySelector(".carousel");
+        let slides = container.querySelectorAll(".slide");
+        let index = 0;
+
+        let indicatorsGrp = document.createElement("div");
+        indicatorsGrp.className = "indicators-grp";
+        container.appendChild(indicatorsGrp);
+
+        slides.forEach((slide, i) => {
+            let indicator = document.createElement("div");
+            indicator.className = "indicator";
+            if (i === 0) indicator.classList.add("activeIndicator");
+            indicatorsGrp.appendChild(indicator);
+
+            indicator.addEventListener("click", () => {
+                goToSlide(i);
+            });
+        });
+
+        let indicators = indicatorsGrp.querySelectorAll(".indicator");
+
+        function goToSlide(i) {
+            carousel.style.transform = `translateX(-${i * 100}%)`;
+
+            indicators.forEach(ind => ind.classList.remove("activeIndicator"));
+            indicators[i].classList.add("activeIndicator");
+
+            index = i;
+        }
+        setInterval(() => {
+            index++;
+            if (index >= slides.length) index = 0;
+            goToSlide(index);
+        }, 3000);
+    });
