@@ -725,6 +725,57 @@
     font-size: 50px;
     color: #ce1212;
 }
+/* &------------------------foooter ----------------- */
+.footer {
+    background-color: #1f1f24;
+    padding-top: 8vh;
+    
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+.content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding-inline: 4vw;
+    padding-bottom: 3vh;
+    border-bottom: #37373fc5 solid 2px;
+}
+.item {
+    display: flex;
+    gap: 0.4vw;
+}
+.item p,span {
+    font-family: "hafsa";
+    font-size: 23px;
+}
+.social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5vw;
+}
+.social svg:hover {
+    fill: #ce121281;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.bottom p {
+    padding-top: 3vh;
+    font-family: "hafsa";
+    font-size: 22px;
+    padding-bottom: 3vh;
+}
+.spa {
+    color: #ce1212;
+}
+
 
 
 
