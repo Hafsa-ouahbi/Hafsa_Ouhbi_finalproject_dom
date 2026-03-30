@@ -703,8 +703,8 @@
 }
 
 .slide img {
-    width: 40%;
-    height: 55%;
+    /* width: 28%; */
+    height: 75%;
     object-fit: cover;
     border-radius: 50%;
 }
