@@ -12,13 +12,11 @@
     <nav class="nav">
         <h1>Yummy <span class="dot">.</span></h1>
         <ul class="list1">
-            <li><a href="">Home</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Menu</a></li>
-            <li><a href="">Special</a></li>
-            <li><a href="">Events</a></li>
-            <li><a href="">Chefs</a></li>
-            <li><a href="">Gallery</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#chefs">Chefs</a></li>
             <div class="sele">
                 <select name="" id="">
                     <option value="option1">Dropdown</option>
@@ -26,17 +24,16 @@
                     <option value="option3">Option 3</option>
                 </select>
             </div>
-            <li><a href="">Contact</a></li>
+            <li><a href="#conta">Contact</a></li>
         </ul>
         <button class="but1">Book a Table</button>
     </nav>
-    <section class="hero">
+    <section id="home" class="hero">
         <div class="left1">
             <div class="top1">
                 <h1>
                     ENJOY YOUR HEALTY <br> DELICIOUS FOOD
                 </h1>
-                <P>We are team of talented designers making websites with Bootstrap</P>
             </div>
             <div class="bot1">
                 <button class="btn2">
@@ -57,7 +54,7 @@
             <img src="./public/img/menu-item-1.png" alt="">
         </div>
     </section>
-    <section>
+    <section id="about">
         <div class="about">
             <div class="top2">
                 <p>About us</p>
@@ -72,9 +69,9 @@
                     </div>
                 </div>
                 <div class="right2">
-                    <p class="fr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do <br> eiusmod tempor
-                        incididunt ut
-                        labore et dolore magna aliqua.</p>
+                    <p class="fr"> At Yummy, we believe that food is more than just a meal — it’s an experience.
+                        Our restaurant combines fresh ingredients, creative recipes, and a warm atmosphere
+                        to deliver unforgettable dining moments.</p>
                     <div class="para">
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#ce1212"
@@ -82,28 +79,28 @@
                                 <path
                                     d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
                             </svg>
-                            <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <p>We use only fresh and locally sourced ingredients for every dish.</p>
                         </span>
                         <span><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#ce1212"
                                 class="bi bi-check-circle-fill" viewBox="0 0 16 16">
                                 <path
                                     d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
                             </svg>
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+                            <p>Our chefs bring passion and creativity to every plate.</p>
                         </span>
                         <span><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#ce1212"
                                 class="bi bi-check-circle-fill" viewBox="0 0 16 16">
                                 <path
                                     d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
                             </svg>
-                            <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat. <br> Duis aute irure dolor in
-                                reprehenderit in voluptate trideta <br> storacalaperda mastiro dolore eu fugiat nulla
-                                pariatur.</p>
+                            <p>We provide a comfortable and friendly environment for families, couples, and friends.</p>
                         </span>
                     </div>
-                    <p class="span2">Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis <br> aute irure dolor
-                        in reprehenderit in voluptate velit esse cillum dolore <br> eu fugiat nulla pariatur. Excepteur
-                        sint occaecat cupidatat non <br> proident</p>
+                    <p class="span2">
+                        Whether you're here for a quick lunch or a special dinner, our goal is to make every visit
+                        enjoyable and memorable. Discover flavors that bring people together.
+                    </p>
+
                     <video controls src="./public/img/mov_bbb.mp4" poster="./public/img/about-2.jpg"></video>
                 </div>
 
@@ -115,9 +112,11 @@
         <div class="why">
             <div class="left3">
                 <h1>Why Choose Yummy</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Duis aute irure dolor in reprehenderit Asperiores dolores sed et. Tenetur
-                    quia eos. Autem tempore quibusdam vel necessitatibus optio ad corporis.</p>
+                <p>
+                    We focus on quality, taste, and customer satisfaction. Our team is dedicated to creating
+                    dishes that not only taste amazing but also make you feel at home. Every detail matters,
+                    from the ingredients we choose to the way we serve you.
+                </p>
                 <button>Learn More <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"
                         fill="rgba(255,255,255,1)">
                         <path
@@ -135,8 +134,8 @@
                             d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7.256A4.5 4.5 0 0 0 12.5 8a4.5 4.5 0 0 0-3.59 1.787A.5.5 0 0 0 9 9.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .39-.187A4.5 4.5 0 0 0 8.027 12H6.5a.5.5 0 0 0-.5.5V16H3a1 1 0 0 1-1-1zm2 1.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5m3 0v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5m3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM4 5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5M7.5 5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm2.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5M4.5 8a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z" />
                     </svg>
                 </div>
-                <h2>Corporis voluptates officia eiusmod</h2>
-                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                <h2>Quality Ingredients</h2>
+                <p>We carefully select fresh and high-quality ingredients to ensure the best taste.</p>
             </div>
             <div class="cards">
                 <div class="svg3">
@@ -146,8 +145,8 @@
                             d="M3.1.7a.5.5 0 0 1 .4-.2h9a.5.5 0 0 1 .4.2l2.976 3.974c.149.185.156.45.01.644L8.4 15.3a.5.5 0 0 1-.8 0L.1 5.3a.5.5 0 0 1 0-.6zm11.386 3.785-1.806-2.41-.776 2.413zm-3.633.004.961-2.989H4.186l.963 2.995zM5.47 5.495 8 13.366l2.532-7.876zm-1.371-.999-.78-2.422-1.818 2.425zM1.499 5.5l5.113 6.817-2.192-6.82zm7.889 6.817 5.123-6.83-2.928.002z" />
                     </svg>
                 </div>
-                <h2>Ullamco laboris ladore lore pan</h2>
-                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                <h2>Creative Recipes</h2>
+                <p>Our menu combines tradition and innovation to bring unique flavors to your table.</p>
             </div>
             <div class="cards">
                 <div class="svg3">
@@ -157,8 +156,8 @@
                             d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5zm13-3H1v2h14zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5" />
                     </svg>
                 </div>
-                <h2>Labore consequatur incidid dolore</h2>
-                <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                <h2>Great Service</h2>
+                <p>Friendly staff and excellent service make your experience comfortable and enjoyable.</p>
             </div>
         </div>
     </section>
@@ -183,7 +182,7 @@
 
         </div>
     </section>
-    <section>
+    <section id="menu">
         <div class="menu">
             <div class="head">
                 <h4>Our Menu</h4>
@@ -209,39 +208,39 @@
                     </div>
                     <div data-category="breakfast">
                         <img src="./public/img/menu-item-2.png" alt="">
-                        <h2>Aut Luia</h2>
-                        <p>Lorem, deren, trataro, filede, nerada</p>
+                        <h2>rfisa</h2>
+                        <p>Classic pasta with fish</p>
                         <h3>$14.95</h3>
                     </div>
                     <div data-category="lunch">
                         <img src="./public/img/menu-item-3.png" alt="">
                         <h2>Est Eligendi</h2>
-                        <p>Lorem, deren, trataro, filede, nerada</p>
+                        <p>eggs, toast, and fruits</p>
                         <h3>$8.95</h3>
                     </div>
                     <div data-category="breakfast">
                         <img src="./public/img/menu-item-4.png" alt="">
-                        <h2>Eos Luibusdam</h2>
-                        <p>Lorem, deren, trataro, filede, nerada</p>
+                        <h2>Grilled Chicken</h2>
+                        <p>Juicy grilled chicken served with fresh vegetables.</p>
                         <h3>$12.95</h3>
                     </div>
                     <div data-category="starters">
                         <img src="./public/img/menu-item-5.png" alt="">
-                        <h2>Eos Luibusdam</h2>
-                        <p>Lorem, deren, trataro, filede, nerada</p>
-                        <h3>$18.95</h3>
+                        <h2>Healthy Breakfast</h2>
+                        <p>A perfect mix of eggs, toast, and fruits.</p>
+                        <h3>$9.95</h3>
                     </div>
                     <div data-category="dinner">
                         <img src="./public/img/menu-item-6.png" alt="">
-                        <h2>Laboriosam Direva</h2>
-                        <p>Lorem, deren, trataro, filede, nerada</p>
-                        <h3>$7.95</h3>
+                        <h2>Italian Pasta</h2>
+                        <p>Classic pasta with rich and creamy sauce.</p>
+                        <h3>$11.95</h3>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section>
+    <section id="testimonials">
         <div class="testimonials">
             <p>TESTIMONIALS</p>
             <h1>What Are They <span>Saying About Us </span> </h1>
@@ -252,11 +251,10 @@
 
                     <div class="slide">
                         <div class="text5">
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem deserunt aliquid explicabo
-                                repel Natus exercitationem voluptatem voluptatibus iste ratione architecto, quasi
-                                accusamus mollitia voluptates.</p>
-                            <h3>SUAL GOODMAN</h3>
-                            <h4>ceo & founder</h4>
+                            <p> “Amazing food and great atmosphere! The service was excellent and I will definitely come
+                                back again.”</p>
+                            <h3>John Smith</h3>
+                            <h4>Customer</h4>
                             <div class="star">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-star-fill" viewBox="0 0 16 16">
@@ -290,10 +288,8 @@
 
                     <div class="slide">
                         <div class="text5">
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem deserunt aliquid explicabo
-                                repel Natus exercitationem voluptatem voluptatibus iste ratione architecto, quasi
-                                accusamus mollitia voluptates.</p>
-                            <h3>SUAL GOODMAN</h3>
+                            <p>“One of the best restaurants I’ve visited. Everything was fresh and delicious.”</p>
+                            <h3>Sarah Johnson</h3>
                             <h4>ceo & founder</h4>
                             <div class="star">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -328,9 +324,7 @@
 
                     <div class="slide">
                         <div class="text5">
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem deserunt aliquid explicabo
-                                repel Natus exercitationem voluptatem voluptatibus iste ratione architecto, quasi
-                                accusamus mollitia voluptates.</p>
+                             <p>Friendly staff and excellent service make your experience comfortable and enjoyable.</p>
                             <h3>SUAL GOODMAN</h3>
                             <h4>ceo & founder</h4>
                             <div class="star">
@@ -365,9 +359,7 @@
                     </div>
                     <div class="slide">
                         <div class="text5">
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem deserunt aliquid explicabo
-                                repel Natus exercitationem voluptatem voluptatibus iste ratione architecto, quasi
-                                accusamus mollitia voluptates.</p>
+                            <p>“One of the best restaurants I’ve visited. Everything was fresh and delicious.”</p>
                             <h3>SUAL GOODMAN</h3>
                             <h4>ceo & founder</h4>
                             <div class="star">
@@ -405,7 +397,7 @@
         </div>
     </section>
     <section>
-        <div class="chef">
+        <div class="chef" id="chefs">
             <h4>CHEFS</h4>
             <h1>Our Proffesional <span class="chch">Chefs</span> </h1>
             <div class="chefs2">
@@ -413,27 +405,24 @@
                     <img src="./public/img/chefs-1.jpg" alt="">
                     <h1>Walter White</h1>
                     <h4>Master Chef</h4>
-                    <p>Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut. Ipsum
-                        exercitationem iure minima enim corporis et voluptate.</p>
+                    <p>Expert in international cuisine with over 15 years of experience.</p>
                 </div>
                 <div>
                     <img src="./public/img/chefs-2.jpg" alt="">
                     <h1>Sarah Jhonson</h1>
                     <h4>Patissier</h4>
-                    <p>Quo esse repellendus quia id. Est eum et accusantium pariatur fugit nihil minima suscipit
-                        corporis. Voluptate sed quas reiciendis animi neque sapiente.</p>
+                    <p>Specialist in desserts and bakery with a creative touch.</p>
                 </div>
                 <div>
                     <img src="./public/img/chefs-3.jpg" alt="">
                     <h1>William Anderson</h1>
                     <h4>Cook</h4>
-                    <p>Vero omnis enim consequatur. Voluptas consectetur unde qui molestiae deserunt. Voluptates enim
-                        aut architecto porro aspernatur molestiae modi.</p>
+                    <p>Passionate about preparing fresh and tasty meals every day.</p>
                 </div>
             </div>
         </div>
     </section>
-    <section>
+    <section id="conta">
         <div class="form">
             <div class="head-book">
                 <button> BOOK A TABLE </button>

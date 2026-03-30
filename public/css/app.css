@@ -2,10 +2,13 @@
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
+    box-sizing: border-box;
+    /* FIX: prevents overflow caused by padding */
 }
 
-/*& ----------------------------nav---------------------- */
+/* ─────────────────────────────────────────
+   NAV
+───────────────────────────────────────── */
 .nav {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #ffffff;
@@ -14,6 +17,16 @@
     padding-inline: 7vw;
     align-items: center;
     height: 10vh;
+    position: sticky;
+    /* FIX: stays visible on scroll */
+    top: 0;
+    z-index: 1000;
+    transition: box-shadow 0.3s ease;
+}
+
+/* JS adds this class on scroll */
+.nav--scrolled {
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 }
 
 .nav h1 {
@@ -39,7 +52,9 @@
     font-size: 17.5px;
     font-weight: 500;
     outline: none;
+    cursor: pointer;
 }
+
 .right2 video {
     width: 100%;
     height: 100%;
@@ -48,7 +63,6 @@
 
 .sele {
     position: relative;
-    /* display: inline-block; */
 }
 
 .sele::after {
@@ -57,10 +71,9 @@
     bottom: -4px;
     left: 0;
     width: 0%;
-    height: 0.01px;
+    height: 2px;
     background-color: #ce1212;
     transition: width 0.3s ease-in-out;
-    padding-bottom: 3px;
 }
 
 .sele:hover::after {
@@ -89,7 +102,6 @@
 
 .list1 a:hover::after {
     width: 100%;
-    /* expand on hover */
 }
 
 .list1 a:hover {
@@ -108,13 +120,17 @@
     border-radius: 20px;
     color: #ffffff;
     font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
 }
 
 .but1:hover {
     background-color: #d53535;
 }
 
-/* & ----------------------------hero section-------------------------- */
+/* ─────────────────────────────────────────
+   HERO
+───────────────────────────────────────── */
 @font-face {
     font-family: "hafsa";
     src: url("../fonts/AmaticSC-Bold.ttf");
@@ -130,7 +146,6 @@
     padding-top: 8vh;
     padding-bottom: 8vh;
     align-items: center;
-
 }
 
 .left1 {
@@ -171,6 +186,7 @@
     border-radius: 20px;
     color: #ffffff;
     font-size: 18px;
+    cursor: pointer;
 }
 
 .btn3 {
@@ -179,33 +195,36 @@
     gap: 0.5vw;
     border: none;
     background-color: transparent;
+    cursor: pointer;
 }
 
 .btn3 p {
     font-size: 18px;
     color: #37373f;
 }
+
 .btn3 p:hover {
     color: #ce1212;
 }
 
 .img1 {
     position: relative;
-    animation: upDown 2s infinite alternate;
-    /* alternate makes mooves moore smooth */
+    animation: upDown 2s ease-in-out infinite alternate;
 }
 
 @keyframes upDown {
     from {
-       top:  0px;
+        top: 0px;
     }
+
     to {
         top: 40px;
     }
 }
 
-/* &------------------------------about page------------------- */
-
+/* ─────────────────────────────────────────
+   ABOUT
+───────────────────────────────────────── */
 .about {
     display: flex;
     flex-direction: column;
@@ -214,10 +233,12 @@
     padding: 8vh 5vw;
     gap: 5vh;
 }
+
 .big {
     display: flex;
     gap: 4vw;
 }
+
 .top2 {
     display: flex;
     flex-direction: column;
@@ -225,39 +246,47 @@
     gap: 2vh;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
 .top2 p {
     color: #5f6265;
     font-size: 20px;
     font-weight: 100;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 .top2 h2 {
     color: #37373f;
     font-family: "hafsa";
     font-size: 60px;
     margin: 0;
 }
+
 .span1 {
     color: #ce1212;
     font-family: "hafsa";
     font-size: 50px;
 }
+
 .left2 img {
     width: 800px;
 }
-.para span  {
+
+.para span {
     display: flex;
     align-items: center;
     gap: 0.5vw;
 }
+
 .para span p {
     font-size: 18px;
     color: #37373f;
 }
+
 .fr {
     color: #5f6265;
     font-size: 19px;
 }
+
 .con {
     border: 5px solid #5f6265;
     display: flex;
@@ -267,14 +296,17 @@
     gap: 1vh;
     color: #37373f;
 }
+
 .con h2 {
     color: #ce1212;
 }
+
 .left2 {
     display: flex;
     flex-direction: column;
     gap: 4vh;
 }
+
 .right2 {
     display: flex;
     flex-direction: column;
@@ -282,49 +314,50 @@
     letter-spacing: 0.2px;
     line-height: 25px;
 }
+
 .para {
     color: #37373f;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     gap: 1.5vh;
-    justify-content: first baselinee;
 }
-.span2  {
+
+.span2 {
     color: #37373f;
     font-size: 19px;
 }
-/*&------------------------ why choose us -----------------------*/
+
+/* ─────────────────────────────────────────
+   WHY CHOOSE US
+───────────────────────────────────────── */
 .why {
     display: grid;
-    /* grid-template-columns: repeat(4, 1fr); */
     grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: 4vw;
-    /* height: 40vh; */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f2f2f2;
     padding: 8vh 5vw;
 }
+
 .left3 {
     background-color: #ce1212;
     display: flex;
     flex-direction: column;
     padding: 5vh 3vw;
-    /* align-items: center; */
-    /* justify-content: center; */
     gap: 4vh;
     text-align: left;
     color: #f2f2f2;
-        box-shadow: 0 10px 15px rgba(0,0,0,0.1), 0 4px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 .left3 p {
     font-size: 19px;
 }
+
 .left3 button {
     width: 11vw;
     margin-left: 6vw;
-    /* padding: 1vh 4vw; */
     padding-inline: 2vw;
     padding-top: 2vh;
     padding-bottom: 2vh;
@@ -336,15 +369,19 @@
     border-radius: 30px;
     color: #f2f2f2;
     font-size: 17px;
-    transition: all 0.1s ease;
+    transition: all 0.2s ease;
+    cursor: pointer;
 }
+
 .left3 button:hover {
     background-color: #f2f2f2;
     color: #ce1212;
 }
+
 .left3 button:hover svg {
     fill: #ce1212;
 }
+
 .cards {
     background-color: #ffffff;
     display: flex;
@@ -355,32 +392,41 @@
     align-items: center;
     gap: 3vh;
     text-align: center;
-        box-shadow: 0 10px 15px rgba(0,0,0,0.1), 0 4px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
 }
+
 .cards h2 {
     color: #37373f;
 }
+
 .cards p {
     color: #5f6265;
 }
+
 .cards .svg3 {
     background-color: #d535351b;
-    padding: 3vh ;
+    padding: 3vh;
     padding-inline: 3.2vh;
-    border-radius:50px ;
+    border-radius: 50px;
     transition: all 0.2s ease;
 }
+
 .svg3 svg {
     fill: #ce1212;
     transition: all 0.2s ease;
 }
+
 .cards:hover .svg3 {
     background-color: #ce1212;
 }
+
 .cards:hover svg {
     fill: #f2f2f2;
 }
-/* &-----------------------program----------------- */
+
+/* ─────────────────────────────────────────
+   COUNTER / PROGRAM
+───────────────────────────────────────── */
 .program {
     position: relative;
     overflow: hidden;
@@ -388,10 +434,10 @@
     grid-template-columns: repeat(4, 1fr);
     align-items: center;
     text-align: center;
-    background-size: cover;
     height: 50vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 .program::before {
     content: "";
     position: absolute;
@@ -401,133 +447,298 @@
     filter: blur(2px);
     z-index: -2;
 }
+
 .program::after {
     content: "";
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.258); /* darkness level */
+    background-color: rgba(0, 0, 0, 0.258);
     z-index: -1;
 }
-.program  div {
+
+.program div {
     position: relative;
     z-index: 1;
 }
+
 .program .nb h1 {
     color: #ffffff;
     font-size: 50px;
 }
+
 .program .nb p {
     font-size: 20px;
     color: #f2f2f29f;
     font-weight: bold;
 }
 
-/* &---------------------menu---------------------- */
+/* ─────────────────────────────────────────
+   MENU
+───────────────────────────────────────── */
 .chch1 {
     font-size: 50px;
     color: #ce1212;
 }
+
 .menu {
     display: flex;
     flex-direction: column;
     padding-top: 5vh;
-    /* padding: 8vh 5vw; */
     gap: 6vh;
     align-items: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 .head {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 4vh;
 }
+
 .head h4 {
     color: #5f6265;
     font-size: 18px;
     font-weight: 100;
 }
+
 .head h1 {
     font-family: "hafsa";
     font-size: 60px;
 }
+
 .head span {
     font-family: "hafsa";
     color: #ce1212;
 }
-.BTN  {
+
+.BTN {
     display: flex;
     gap: 1vw;
     align-items: center;
     justify-content: center;
 }
+
 .BTN button {
     background-color: transparent;
     border: none;
     font-size: 21px;
     color: #37373fe3;
     border-bottom: 2px solid #37373f56;
-    transition: all 0.2s ease;
+    transition: all 0.25s ease;
     padding-bottom: 3px;
+    cursor: pointer;
 }
+
 .BTN button:hover {
-    border-bottom-color:#ce1212 ;
+    border-bottom-color: #ce1212;
+    color: #ce1212;
 }
+
+/* Active filter button — set by JS */
+.BTN button.active-menu-btn {
+    border-bottom-color: #ce1212;
+    color: #ce1212;
+    font-weight: 600;
+}
+
 .small {
     display: flex;
     flex-direction: column;
     gap: 5vh;
 }
+
 .title {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1vh;
 }
+
 .title h4 {
     color: #5f6265;
     font-size: 18px;
     font-weight: 100;
 }
+
 .title h1 {
     font-family: "hafsa";
     font-size: 50px;
     color: #ce1212;
 }
+
 .realMenu {
     width: 90vw;
     display: grid;
-    grid-template-columns: repeat(3 , 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 3vh;
-    /* background-color: #d53535; */
     box-sizing: border-box;
     overflow-x: hidden;
     align-items: center;
 }
+
 .realMenu img {
     width: 320px;
 }
+
 .realMenu div {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2vh;
+    /* FIX: start hidden so JS fade-in works on page load */
+    opacity: 0;
+    transform: translateY(10px);
 }
+
 .realMenu div h2 {
     color: #37373f;
     font-family: "hafsa";
     font-size: 30px;
 }
+
 .realMenu div p {
     color: #5f6265;
 }
+
 .realMenu div h3 {
     color: #ce1212;
     font-family: "hafsa";
     font-size: 30px;
 }
-/*& -------------------chef------------------------- */
 
+/* ─────────────────────────────────────────
+   TESTIMONIALS / CAROUSEL
+───────────────────────────────────────── */
+.testimonials {
+    padding: 5vh 6vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+    gap: 4vh;
+    margin-top: 7vh;
+    background-color: #f2f2f2;
+}
+
+.testimonials p {
+    font-size: 15px;
+    color: #171212d5;
+}
+
+.testimonials h1 {
+    font-size: 45px;
+    font-family: "hafsa";
+}
+
+.testimonials h1 span {
+    color: #ce1212;
+    font-size: 45px;
+}
+
+.carousel-container {
+    width: 70%;
+    position: relative;
+    overflow: hidden;
+    /* FIX: gives keyboard nav a visible focus ring */
+    outline: none;
+}
+
+.carousel-container:focus-visible {
+    outline: 2px dashed #ce1212;
+    outline-offset: 4px;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    /* smoother than linear ease */
+}
+
+.slide {
+    min-width: 100%;
+    display: flex;
+    gap: 2vw;
+    position: relative;
+}
+
+.slide .text5 {
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    padding-left: 1vw;
+}
+
+.slide>.text5::before {
+    content: '';
+    width: 3px;
+    height: 60%;
+    top: 8px;
+    position: absolute;
+    left: 1px;
+    background-color: #ce1212;
+}
+
+.slide .text5 p {
+    line-height: 6vh;
+    font-weight: 500;
+}
+
+.slide .text5 h3 {
+    font-weight: 400;
+}
+
+.slide .text5 h4 {
+    color: #171212a8;
+    font-size: 14px;
+}
+
+.slide .text5 .star {
+    display: flex;
+}
+
+.slide .text5 .star svg {
+    color: #ffc107;
+}
+
+.slide img {
+    width: 40%;
+    height: 55%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.indicators-grp {
+    width: 100%;
+    padding: 2vh 0;
+    position: absolute;
+    bottom: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    z-index: 10;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    background: #808080bd;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* FIX: active dot is bigger so it's easier to see */
+.activeIndicator {
+    background-color: #ce1212;
+    transform: scale(1.3);
+}
+
+/* ─────────────────────────────────────────
+   CHEFS
+───────────────────────────────────────── */
 .chef {
     display: flex;
     flex-direction: column;
@@ -535,23 +746,23 @@
     padding: 5vh 5vw;
     align-items: center;
 }
+
 .chef h4 {
     color: #5f6265;
     font-weight: 100;
     font-size: 20px;
 }
+
 .chch {
     font-size: 44px;
     color: #ce1212;
 }
+
 .chef h1 {
     font-family: "hafsa";
     font-size: 45px;
 }
-.chef h1 {
-    font-family: "hafsa";
-    font-size: 45px;
-}
+
 .chefs2 {
     display: flex;
     gap: 3vw;
@@ -567,15 +778,13 @@
     gap: 2vh;
     align-items: center;
     text-align: center;
-    /* padding: 3vh 3vw;*/
-    box-shadow: 0 10px 15px rgba(0,0,0,0.1), 
-                0 4px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
     max-width: 400px;
     border-radius: 10px;
     padding-bottom: 5vh;
     transition: all 0.2s ease;
 }
-/* scale makes the div bigger without breaking the layout */
+
 .chefs2 div:hover {
     transform: translateY(-10px) scale(1.08);
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.358);
@@ -587,11 +796,13 @@
     height: auto;
     border-radius: 10px;
 }
-/* &---------------------reservations----------- */
+
+/* ─────────────────────────────────────────
+   RESERVATIONS
+───────────────────────────────────────── */
 .book {
-    background-color: #f5f5f5; /* replace $bgbook */
+    background-color: #f5f5f5;
     display: flex;
-    /* padding-left: 6vw; */
     padding-right: 6vw;
     margin-bottom: 5vh;
     width: fit-content;
@@ -609,8 +820,8 @@
 .imb img {
     width: 100%;
     height: 100%;
-
 }
+
 .formm {
     display: flex;
     flex-direction: column;
@@ -635,10 +846,9 @@
 
 .grid-book input:focus {
     outline: none;
-    border: #ce1212 solid 2px; /* $myclr */
+    border: #ce1212 solid 2px;
     box-shadow: 0 8px 25px #ce121240;
 }
-
 
 .text {
     width: 100%;
@@ -654,13 +864,12 @@
 
 .text textarea:focus {
     outline: none;
-    border: #ce1212 solid 2px; 
+    border: #ce1212 solid 2px;
     box-shadow: 0 8px 25px #ce121259;
 }
 
-
 .book-bu {
-    background-color: #ce1212; 
+    background-color: #ce1212;
     border-radius: 5px;
     padding: 1vh 2vw;
     border: none;
@@ -670,7 +879,7 @@
 }
 
 .book-bu:hover {
-    background-color: #d53535; /* darker version of $myclr */
+    background-color: #d53535;
 }
 
 .form {
@@ -695,20 +904,24 @@
     padding: 1vh 1.5vw;
     font-weight: 100;
     font-size: 18px;
-    color: #5f6265; 
+    color: #5f6265;
+    cursor: pointer;
 }
 
 .head-book h1 {
     font-family: "hafsa";
     font-size: 50px;
 }
+
 .head-book h1 .tab {
     font-family: "hafsa";
-    font-size: 50px ;
+    font-size: 50px;
     color: #ce1212;
 }
 
-/* &------------------map-------------- */
+/* ─────────────────────────────────────────
+   MAP
+───────────────────────────────────────── */
 .map {
     display: flex;
     flex-direction: column;
@@ -718,39 +931,66 @@
     padding-top: 4vh;
     padding-bottom: 3vh;
 }
-.tit {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 3vh;
-}
+
 .tite button {
     color: #5f6265;
     font-weight: 100;
     font-size: 18px;
     background-color: transparent;
     border: none;
+    cursor: pointer;
 }
+
 .tite h1 {
     font-family: "hafsa";
     font-size: 50px;
 }
+
 .tite h1 span {
     font-family: "hafsa";
     font-size: 50px;
     color: #ce1212;
 }
-/* &------------------------foooter ----------------- */
+
+/* ─────────────────────────────────────────
+   CONTACT
+───────────────────────────────────────── */
+.cnt {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-inline: 8vw;
+    gap: 2.5vh;
+    padding-top: 4vh;
+    padding-bottom: 6vh;
+}
+
+.it {
+    padding: 3vh 2vw;
+    display: flex;
+    gap: 1vw;
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.text12 .span12,
+.p12 {
+    font-size: 23px;
+    font-family: "hafsa";
+}
+
+/* ─────────────────────────────────────────
+   FOOTER
+───────────────────────────────────────── */
 .footer {
     background-color: #1f1f24;
     padding-top: 8vh;
-    
 }
+
 .container {
     display: flex;
     flex-direction: column;
     color: white;
 }
+
 .content {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -758,20 +998,25 @@
     padding-bottom: 3vh;
     border-bottom: #37373fc5 solid 2px;
 }
+
 .item {
     display: flex;
     gap: 0.4vw;
 }
-.item p,span {
+
+.item p,
+.item span {
     font-family: "hafsa";
     font-size: 23px;
 }
+
 .social {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.5vw;
 }
+
 .social svg:hover {
     fill: #ce121281;
 }
@@ -781,144 +1026,14 @@
     flex-direction: column;
     align-items: center;
 }
+
 .bottom p {
     padding-top: 3vh;
     font-family: "hafsa";
     font-size: 22px;
     padding-bottom: 3vh;
 }
+
 .spa {
     color: #ce1212;
 }
-/* &----------------contact2-------------------- */
-.cnt {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding-inline: 8vw;
-    gap: 2.5vh;
-    padding-top: 4vh;
-    padding-bottom: 6vh;
-}
-.it {
-    padding: 3vh 2vw;
-    display: flex;
-    gap: 1vw;
-    box-shadow: 0 1px 20px rgba(0,0,0,0.1), 0 4px 6px rgba(0,0,0,0.05);
-}
-.text12 .span12,.p12{
-    font-size: 23px;
-    font-family: "hafsa";
-}
-
-/* &------------carousel------------- */
-.testimonials{
-    padding: 5vh 6vw;
-    display: grid;
-    grid-template-columns: 1fr;
-    text-align: center;
-    justify-items: center;
-    gap: 4vh;
-    margin-top: 7vh;
-    background-color: #f2f2f2;
-}
-.testimonials p {
-    font-size: 15px;
-    color: #171212d5;
-}
-.testimonials h1{
-    font-size: 45px;
-    font-family: "hafsa";
-}
-.testimonials h1 span {
-    color: #ce1212;
-    font-size: 45px;
-}
-
-
-/* ^ carousel */
-.carousel-container {
-    width: 70%;
-    position: relative;
-    overflow: hidden;
-}
-
-.carousel {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-
-.slide {
-    min-width: 100%;
-    display: flex;
-    gap: 2vw;
-    position: relative;
-    
-}
-.slide .text5{
-    text-align: start;
-    display: flex;
-    flex-direction: column;
-    gap: 2vh;
-    padding-left: 1vw;
-    
-}
-.slide > .text5::before{
-    content: '';
-    width: 3px;
-    height: 60%;
-    top: 8px;
-    position: absolute;
-    left: 1px;
-    background-color: #ce1212;
-}
-.slide .text5 p{
-    line-height: 6vh;
-    font-weight: 500;
-}
-.slide .text5 h3{
-    font-weight: 400;
-}
-.slide .text5 h4{
-    color: #171212a8;
-    font-size: 14px;
-}
-.slide .text5 .star {
-    display: flex;
-    
-}
-.slide .text5 .star svg{
-    color: #ffc107;
-}
-
-.slide img {
-    width: 40%;
-    height: 55%;
-    object-fit: cover;
-    border-radius: 50%;
-
-}
-
-.indicators-grp{
-    width: 100%;
-    padding: 2vh 0;
-    position: absolute;
-    bottom: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    z-index: 10;
-}
-.indicator{
-    width: 12px;
-    height: 12px;
-    background: #808080bd;
-    border-radius: 50%;
-    cursor: pointer;
-}
-.activeIndicator{
-    background-color: #ce1212;
-}
-
-
