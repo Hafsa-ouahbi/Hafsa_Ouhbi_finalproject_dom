@@ -195,14 +195,14 @@ if (menuBtns.length > 0) {
 let btns = document.querySelectorAll(".BTN button");
 let plates = document.querySelectorAll(".realMenu div");
 
-btns.forEach(function(b) {
-    b.addEventListener("click", function() {
+btns.forEach(function (b) {
+    b.addEventListener("click", function () {
         // njibo category dyal l button li derna eliha click
         let category = b.getAttribute("data-category");
 
         // show/hide plates
-        plates.forEach(function(item) {
-            if(item.dataset.category === category) {
+        plates.forEach(function (item) {
+            if (item.dataset.category === category) {
                 item.style.display = "flex";
             } else {
                 item.style.display = "none";
@@ -279,4 +279,23 @@ document.querySelectorAll('.carousel-container').forEach(container => {
             startAutoplay();
         }
     }, { passive: true });
+});
+
+
+function scrollToSection() {
+    document.getElementById("conta").scrollIntoView({
+        behavior: "smooth"
+    });
+}
+
+
+window.addEventListener("scroll", () => {
+    document.querySelectorAll(".reveal").forEach(el => {
+        let top = el.getBoundingClientRect().top;
+        let windowHeight = window.innerHeight;
+
+        if (top < windowHeight - 100) {
+            el.classList.add("active");
+        }
+    });
 });

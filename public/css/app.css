@@ -6,6 +6,10 @@
     /* FIX: prevents overflow caused by padding */
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* ─────────────────────────────────────────
    NAV
 ───────────────────────────────────────── */
@@ -128,6 +132,27 @@
     background-color: #d53535;
 }
 
+.but1,
+.btn2 {
+    background: linear-gradient(135deg, #ce1212, #ff4d4d);
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* hover effect */
+.but1:hover,
+.btn2:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(206, 18, 18, 0.4);
+}
+
+/* click effect */
+.but1:active,
+.btn2:active {
+    transform: scale(0.95);
+}
+
 /* ─────────────────────────────────────────
    HERO
 ───────────────────────────────────────── */
@@ -220,6 +245,14 @@
     to {
         top: 40px;
     }
+}
+
+.img1 img {
+    transition: transform 0.4s ease;
+}
+
+.img1:hover img {
+    transform: scale(1.1) rotate(2deg);
 }
 
 /* ─────────────────────────────────────────
@@ -418,6 +451,15 @@
 
 .cards:hover .svg3 {
     background-color: #ce1212;
+}
+
+.cards {
+    transition: all 0.4s ease;
+}
+
+.cards:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
 .cards:hover svg {
@@ -1036,4 +1078,40 @@
 
 .spa {
     color: #ce1212;
+}
+
+
+
+
+
+
+
+
+
+.left1 {
+    animation: fadeUp 1s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.6s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
 }
